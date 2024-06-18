@@ -2,7 +2,7 @@ package de.demmer.dennis;
 
 public class RecTest {
 
-	// 10 + 9 +8 + 7 + ...
+	// 10 + 9 + 8 + 7 + ...
 	public int sum(int k) {
 		if (k > 0) {
 			return k + sum(k - 1);

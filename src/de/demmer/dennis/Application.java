@@ -1,20 +1,30 @@
 package de.demmer.dennis;
 
 import java.io.File;
+import java.util.List;
 
 public class Application {
 
 	public static void main(String[] args) {
 		
-//		FileUtil.printDirectory(new File("C:\\Users\\Beispiel\\Documents"));
+		FileUtil.printDirectory(new File("C:\\Users\\Beispiel\\Documents"));
 		
+		// Erzeugt ein File Objekt mit einem Dateipfad im Parameter
+		File file = new File("C:\\Users\\Unknown\\git\\18-06-2024\\ordner1");
 		
+		//Überprüft ob das File existiert -> true/false
+		System.out.println(file.exists());
 		
-		RecTest rTest = new RecTest();
+		//Überprüft ob das File ein Ordner ist -> true/false
+		System.out.println(file.isDirectory());
 		
-		int ergebnis = rTest.sum(2);
-		System.out.println(ergebnis);
+		//Listet alle Files in einem Ordner in einem Array auf
+		File[] fileArray = file.listFiles();
 		
+		//Gibt den genauen Pfad des Files als String zurück
+		System.out.println(file.getAbsolutePath());
+		
+
 	}
 	
 	
